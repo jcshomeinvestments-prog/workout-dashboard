@@ -86,7 +86,7 @@ const current = workoutPlan[selectedDay as keyof typeof workoutPlan];
 
   const stats = useMemo(() => {
     const completedCount = Object.values(completed).filter(Boolean).length;
-   const totalVolume = Object.values(entries).reduce((sum, entry: any) => {
+const totalVolume = Object.values(entries).reduce((sum: number, entry: any) => {
       const sets = Number(entry.sets || 0);
       const reps = Number(entry.reps || 0);
       const weight = Number(entry.weight || 0);
