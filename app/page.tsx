@@ -82,7 +82,7 @@ export default function WorkoutDashboard() {
   );
   const [notes, setNotes] = useState("");
 
-  const current = workoutPlan[selectedDay];
+const current = workoutPlan[selectedDay as keyof typeof workoutPlan];
 
   const stats = useMemo(() => {
     const completedCount = Object.values(completed).filter(Boolean).length;
