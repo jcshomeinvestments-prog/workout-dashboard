@@ -92,7 +92,7 @@ const totalVolume = Object.values(entries).reduce((sum: number, entry: any) => {
       const weight = Number(entry.weight || 0);
       return sum + sets * reps * weight;
     }, 0);
-    const prs = Object.values(entries).filter((e) => e.pr).length;
+   const prs = Object.values(entries).filter((e: any) => e.pr).length;
     return { completedCount, totalVolume, prs };
   }, [completed, entries]);
 
