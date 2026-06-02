@@ -98,7 +98,7 @@ const totalVolume = Object.values(entries).reduce((sum: number, entry: any) => {
 
   const motivation = motivationMessages[stats.completedCount % motivationMessages.length];
 
-  const updateEntry = (exerciseId, field, value) => {
+  const updateEntry = (exerciseId: string, field: string, value: any) => {
     setEntries((prev) => ({
       ...prev,
       [exerciseId]: { ...prev[exerciseId], [field]: value },
